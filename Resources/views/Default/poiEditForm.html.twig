@@ -1,0 +1,37 @@
+{% extends 'GmapsBundle::layout.html.twig' %}
+
+{% block title %}Symfony - Formulario POI{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+    <h1>Formulario POI</h1>
+    <form action="{{ path('GmapsBundle_poiFormEdit') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_errors(form) }}
+        {{ form_widget(form.id) }}
+        <div>
+            {{ form_label(form.name, 'Nombre') }}
+            {{ form_widget(form.name) }}
+        </div>
+        <div>
+            {{ form_label(form.latitude, 'Latitud') }}
+            {{ form_widget(form.latitude) }}
+        </div>
+        <div>
+            {{ form_label(form.longitude, 'Longitud') }}
+            {{ form_widget(form.longitude) }}
+        </div>
+        <div>
+            {{ form_label(form.description, 'Descripcion') }}
+            {{ form_widget(form.description) }}
+        </div>
+        <div>
+            {{ form_label(form.poiCategory, 'Categoria') }}
+            {{ form_widget(form.poiCategory) }}
+        </div>
+        {{ form_rest(form) }}
+        <input type="submit" />
+    </form>
+{% endblock %}

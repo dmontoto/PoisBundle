@@ -1,0 +1,11 @@
+GmapsBundle_poi:
+    resource: "@GmapsBundle/Resources/config/routing/poi.xml"
+    prefix:   /poi
+
+GmapsBundle_poicategory:
+    resource: "@GmapsBundle/Resources/config/routing/poicategory.xml"
+    prefix:   /poicategory
+
+GmapsBundle_general:
+    resource: "@GmapsBundle/Resources/config/routing/general.xml"
+    prefix:   /maps

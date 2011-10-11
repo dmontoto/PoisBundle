@@ -1,0 +1,12 @@
+{% extends 'GmapsBundle::layout.html.twig' %}
+
+{% block title %}Symfony - Grid POI{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+    <h1>Grid POI</h1>
+    {{ grid(data, 'GmapsBundle:Grid:gridPoi.html.twig') }}
+{% endblock %}
